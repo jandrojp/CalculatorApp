@@ -250,7 +250,7 @@
         android:layout_marginTop="20dp"
         android:text="Mostrar opciones"
         android:textColor="#000000"
-        android:textSize="14sp"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="@+id/tableLayout"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
@@ -267,33 +267,37 @@
             android:orientation="horizontal">
 
             <RadioButton
-                android:id="@+id/radioButton6"
+                android:id="@+id/radioButtonSum"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="8dp"
+                android:layout_marginRight="4dp"
                 android:layout_weight="1"
-                android:text="Suma" />
+                android:text="Suma"
+                android:textSize="15sp" />
 
             <RadioButton
                 android:id="@+id/radioButton5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="8dp"
+                android:layout_marginRight="4dp"
                 android:layout_weight="1"
-                android:text="Resta" />
+                android:text="Resta"
+                android:textSize="15sp" />
 
             <RadioButton
                 android:id="@+id/radioButton3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="8dp"
-                android:text="Multiplicación" />
+                android:layout_marginRight="4dp"
+                android:text="Multiplicación"
+                android:textSize="15sp" />
 
             <RadioButton
                 android:id="@+id/radioButton4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="División" />
+                android:text="División"
+                android:textSize="15sp" />
         </RadioGroup>
     </LinearLayout>
 
