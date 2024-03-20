@@ -6,12 +6,23 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.3" />
+        app:layout_constraintGuide_percent="0.2" />
 
     <TableLayout
         android:id="@+id/tableLayout"
@@ -29,7 +40,7 @@
                 android:id="@+id/button1"
                 android:layout_width="wrap_content"
                 android:layout_height="80dp"
-                android:layout_marginRight="8dp"
+                android:layout_marginRight="10dp"
                 android:backgroundTint="#DFDEDE"
                 android:text="1"
                 android:textColor="#000000"
@@ -40,7 +51,7 @@
                 android:id="@+id/button2"
                 android:layout_width="wrap_content"
                 android:layout_height="80dp"
-                android:layout_marginRight="8dp"
+                android:layout_marginRight="10dp"
                 android:backgroundTint="#DFDEDE"
                 android:text="2"
                 android:textColor="#000000"
@@ -50,7 +61,7 @@
                 android:id="@+id/button3"
                 android:layout_width="wrap_content"
                 android:layout_height="80dp"
-                android:layout_marginRight="8dp"
+                android:layout_marginRight="10dp"
                 android:backgroundTint="#DFDEDE"
                 android:text="3"
                 android:textColor="#000000"
@@ -65,7 +76,7 @@
                 android:id="@+id/button4"
                 android:layout_width="wrap_content"
                 android:layout_height="80dp"
-                android:layout_marginRight="8dp"
+                android:layout_marginRight="10dp"
                 android:backgroundTint="#DFDEDE"
                 android:text="4"
                 android:textColor="#000000"
@@ -75,7 +86,7 @@
                 android:id="@+id/button5"
                 android:layout_width="wrap_content"
                 android:layout_height="80dp"
-                android:layout_marginRight="8dp"
+                android:layout_marginRight="10dp"
                 android:backgroundTint="#DFDEDE"
                 android:text="5"
                 android:textColor="#000000"
@@ -85,7 +96,7 @@
                 android:id="@+id/button6"
                 android:layout_width="wrap_content"
                 android:layout_height="80dp"
-                android:layout_marginRight="8dp"
+                android:layout_marginRight="10dp"
                 android:backgroundTint="#DFDEDE"
                 android:text="6"
                 android:textColor="#000000"
@@ -100,7 +111,7 @@
                 android:id="@+id/button7"
                 android:layout_width="wrap_content"
                 android:layout_height="80dp"
-                android:layout_marginRight="8dp"
+                android:layout_marginRight="10dp"
                 android:backgroundTint="#DFDEDE"
                 android:text="7"
                 android:textColor="#000000"
@@ -110,7 +121,7 @@
                 android:id="@+id/button8"
                 android:layout_width="wrap_content"
                 android:layout_height="80dp"
-                android:layout_marginRight="8dp"
+                android:layout_marginRight="10dp"
                 android:backgroundTint="#DFDEDE"
                 android:text="8"
                 android:textColor="#000000"
@@ -120,7 +131,7 @@
                 android:id="@+id/button9"
                 android:layout_width="wrap_content"
                 android:layout_height="80dp"
-                android:layout_marginRight="8dp"
+                android:layout_marginRight="10dp"
                 android:backgroundTint="#DFDEDE"
                 android:text="9"
                 android:textColor="#000000"
@@ -140,20 +151,20 @@
         app:layout_constraintTop_toBottomOf="@+id/tableLayout">
 
         <Button
-            android:id="@+id/button15"
+            android:id="@+id/buttonPoint"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginRight="8dp"
+            android:layout_marginRight="10dp"
             android:backgroundTint="#979797"
             android:text=","
             android:textColor="#FBFBFB"
             android:textSize="20sp" />
 
         <Button
-            android:id="@+id/button10"
+            android:id="@+id/button0"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:layout_marginRight="8dp"
+            android:layout_marginRight="10dp"
             android:backgroundTint="#DFDEDE"
             android:text="0"
             android:textColor="#000000"
@@ -230,6 +241,60 @@
             android:text="AC"
             android:textColor="#FFFFFF"
             android:textSize="20sp" />
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Mostrar opciones"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/tableLayout"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+        app:layout_constraintStart_toStartOf="@+id/checkBox"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox">
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioButton6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:text="Suma" />
+
+            <RadioButton
+                android:id="@+id/radioButton5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:text="Resta" />
+
+            <RadioButton
+                android:id="@+id/radioButton3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:text="Multiplicación" />
+
+            <RadioButton
+                android:id="@+id/radioButton4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="División" />
+        </RadioGroup>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
