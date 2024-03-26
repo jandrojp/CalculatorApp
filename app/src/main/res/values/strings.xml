@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Calculator</string>
-    <string name="settings">Mostrar opciones deshabilitar</string>
+    <string name="settings">Habilitar opciones</string>
     <string name="sum">Suma</string>
     <string name="less">Resta</string>
     <string name="multiply">Multiplicación</string>
