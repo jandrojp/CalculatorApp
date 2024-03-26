@@ -101,6 +101,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
+
         radioGroup.setOnCheckedChangeListener((radioGroup, i) -> {
             if (i == R.id.radioButtonSum) {
                 buttonSum.setVisibility(View.GONE);
@@ -127,6 +128,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 buttonMultiply.setVisibility(View.VISIBLE);
             }
         });
+
     }
 
     @Override
