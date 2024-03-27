@@ -1,5 +1,6 @@
 package es.ieslavereda.calculator;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -8,6 +9,8 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+
+import java.io.Serializable;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -23,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Operacion operacion;
     private Double operando;
     private RadioGroup radioGroup;
+    private String number;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -129,6 +133,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
+        if (savedInstanceState == null) {
+            number = "0";
+        } else {
+            number = (String) savedInstanceState.getSerializable("clave");
+            operacion = (Operacion) savedInstanceState.getSerializable("operando");
+        }
+
+        textView.setText(number);
+
     }
 
     @Override
@@ -142,5 +155,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putSerializable("clave", textView.getText().toString());
+        outState.putSerializable("operando", operacion);
+    }
 
 }
