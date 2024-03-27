@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Operacion operacion;
     private Double operando;
     private RadioGroup radioGroup;
-    private String number;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -134,13 +133,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
 
         if (savedInstanceState == null) {
-            number = "0";
+            textView.setText("0");
         } else {
-            number = (String) savedInstanceState.getSerializable("clave");
-            operacion = (Operacion) savedInstanceState.getSerializable("operando");
+            textView.setText((String) savedInstanceState.getSerializable("clave"));
+            operando = (Double) savedInstanceState.getSerializable("operando");
+            operacion = (Operacion) savedInstanceState.getSerializable("operacion");
         }
-
-        textView.setText(number);
 
     }
 
@@ -159,7 +157,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putSerializable("clave", textView.getText().toString());
-        outState.putSerializable("operando", operacion);
+        outState.putSerializable("operacion", (operacion));
+        outState.putSerializable("operando", operando);
     }
 
 }
