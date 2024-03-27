@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
 
         buttonPoint.setOnClickListener(v -> {
-            textView.setText(textView.getText() + ".");
+            if (!textView.getText().toString().contains(".")) textView.setText(textView.getText() + ".");
         });
 
         buttonEqual.setOnClickListener(v -> {
