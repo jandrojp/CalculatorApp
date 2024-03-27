@@ -134,6 +134,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if (savedInstanceState == null) {
             textView.setText("0");
+
         } else {
             textView.setText((String) savedInstanceState.getSerializable("clave"));
             operando = (Double) savedInstanceState.getSerializable("operando");
@@ -157,7 +158,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putSerializable("clave", textView.getText().toString());
-        outState.putSerializable("operacion", (operacion));
+        outState.putSerializable("operacion", operacion);
         outState.putSerializable("operando", operando);
     }
 

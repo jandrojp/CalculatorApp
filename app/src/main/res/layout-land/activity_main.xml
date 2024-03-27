@@ -287,6 +287,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="4dp"
                 android:layout_weight="1"
+                android:buttonTint="#000000"
                 android:text="@string/sum"
                 android:textColor="#000000"
                 android:textSize="15sp" />
@@ -297,6 +298,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="4dp"
                 android:layout_weight="1"
+                android:buttonTint="#000000"
                 android:text="@string/less"
                 android:textColor="#000000"
                 android:textSize="15sp" />
@@ -306,6 +308,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="4dp"
+                android:buttonTint="#000000"
                 android:text="@string/multiply"
                 android:textColor="#000000"
                 android:textSize="15sp" />
@@ -314,6 +317,7 @@
                 android:id="@+id/radioButtonSplit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:buttonTint="#000000"
                 android:text="@string/split"
                 android:textColor="#000000"
                 android:textSize="15sp" />
